@@ -8,11 +8,11 @@ plot1 <- function() {
                        stringsAsFactors = F, nrow = 1)
   names(consumption) <- header
 
-  ##Manipulate Columns
+##Manipulate Columns
   consumption$Date = as.Date(consumption$Date, "%d/%m/%Y")
-
+  
   #Create Histogram
-  png(filename = "plot1.png", width = 480, height = 480)
+  png(filename = "plot1.png")
   hist(consumption$Global_active_power, col = "red", xlab = "Global Active Power (kilowatts)", main = "Global Active Power")
   dev.off()
 }
